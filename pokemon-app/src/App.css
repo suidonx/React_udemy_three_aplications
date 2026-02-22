@@ -1,0 +1,46 @@
+#root {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.pokemonCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  place-items: center;
+  margin-top: 30px;
+}
+
+.cardName {
+  padding: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.cardInfo {
+  text-align: center;
+}
+
+.btn {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn button {
+  padding: 13px 32px;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 8px 47px 4px #777777;
+}
+
+.btn button:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
