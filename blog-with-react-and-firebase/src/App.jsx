@@ -6,13 +6,19 @@ import { Login } from "./components/Login";
 import { Logout } from "./components/Logout";
 import { Router } from "./router/Routes";
 import { Navbar } from "./components/Navbar";
+import {
+  LoginUserContext,
+  LoginUserProvider,
+} from "./providers/LoginUserProvider";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Router />
-    </BrowserRouter>
+    <LoginUserProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Router />
+      </BrowserRouter>
+    </LoginUserProvider>
   );
 }
 

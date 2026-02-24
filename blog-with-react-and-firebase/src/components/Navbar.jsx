@@ -6,8 +6,11 @@ import {
   faFilePen,
   faArrowRightToBracket,
 } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { LoginUserContext } from "../providers/LoginUserProvider";
 
 export const Navbar = () => {
+  const { isAuth } = useContext(LoginUserContext);
   return (
     <nav>
       <Link to="/">
@@ -18,10 +21,17 @@ export const Navbar = () => {
         <FontAwesomeIcon icon={faFilePen} />
         記事投稿
       </Link>
+      {!isAuth ? (
         <Link to="/login">
           <FontAwesomeIcon icon={faArrowRightToBracket} />
           ログイン
         </Link>
+      ) : (
+        <Link to="/logout">
+          <FontAwesomeIcon icon={faArrowRightToBracket} />
+          ログアウト
+        </Link>
+      )}
     </nav>
   );
 };
