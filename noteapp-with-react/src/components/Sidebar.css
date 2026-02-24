@@ -1,0 +1,56 @@
+button {
+  background-color: transparent;
+  border: none;
+  color: #08c;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #eee;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.sidebar-header h1 {
+  margin: 0;
+}
+
+.sidebar-notes {
+  overflow-y: scroll;
+  height: calc(100vh - 78px);
+}
+
+.sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar-note.active {
+  background-color: #dfdfdf;
+}
+
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-note p {
+  margin: 10px 0;
+}
+
+.sidebar-note small {
+  color: #999;
+}
+
+.sidebar-note:hover {
+  background-color: #eee;
+}
